@@ -5,7 +5,7 @@ import ModalSetting from "../components/ModalSetting";
 import Navigation from "../components/Navigation";
 import Timer from "../components/Timer";
 
-export default function index() {
+export default function Index() {
 	const [pomodoro, setPomodoro] = useState(25);
 	const [shortBreak, setShortBreak] = useState(5);
 	const [longBreak, setLongBreak] = useState(10);
@@ -112,7 +112,7 @@ export default function index() {
 		return () => {
 			clearInterval(timer);
 		};
-	}, [seconds, pomodoro, shortBreak, longBreak, ticking]);
+	}, [seconds, pomodoro, shortBreak, longBreak, ticking,clockTicking,consumedSecond]);
 
 	return (
 		<div className="bg-gray-900 min-h-screen font-inter">
